@@ -31,6 +31,19 @@ with others through real-time chat — all in one place.
 Full project report available in the `/docs` folder — includes system 
 design, UML diagrams, ER diagrams, test cases, and UI screenshots.
 
+## 📸 Screenshots
+
+### 🔐 Login Page
+![Login](screenshots/login.png)
+### 🏠 Home Page
+![Home](screenshots/home.png)
+### 👤 Profile Page
+![Profile](screenshots/profile.png)
+### 💬 Chat Feature
+![Chat](screenshots/chat.png)
+### 🎵 Playlist Section
+![Playlist](screenshots/playlist.png)
+
 ## 🎓 Academic Context
 Developed as a final year MCA project at Presidency College, Bengaluru 
 (Bengaluru City University) — Academic Year 2023–24.
