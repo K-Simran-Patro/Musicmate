@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - MusicMate</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="icon.png" alt="MusicMate Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Main</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="profile-section">
+        <!-- Profile Picture Upload -->
+        <div class="profile-picture-container">
+            <img id="profile-picture" src="default.jpg" 
+                 alt="Profile Picture" onclick="triggerProfilePictureUpload()">
+            <input type="file" id="profile-picture-upload" 
+                   accept="image/*" style="display: none;" onchange="uploadProfilePicture(event)">
+        </div>
+
+        <!-- User Info -->
+        <p id="user-id">User ID: <span></span></p>
+        <p id="user-email">Email: <span></span></p>
+
+        <!-- Editable Fields -->
+        <label for="username">Username</label>
+        <input type="text" id="username" class="editable">
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" class="editable">
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" class="editable">
+
+        <!-- Save Changes Button -->
+        <button id="save-profile-btn">Save Changes</button>
+
+        <!-- Logout Button -->
+        <a href="home.html">
+            <button id="logout-button">Logout</button>
+        </a>
+    </section>
+
+    <script src="profile.js"></script>
+</body>
+</html>

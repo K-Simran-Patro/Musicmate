@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicMate Main Page</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        document.querySelectorAll('li').forEach(function(user) {
+            user.addEventListener('click', function() {
+                const userId = user.getAttribute('data-user-id');
+                if (userId) {
+                    window.location.href = `chat.html?userId=${userId}`;  // Correct URL structure
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="icon.png" alt="MusicMate Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html">Main</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profiles">
+        <h2>Profiles</h2>
+        <div class="profile-container" id="profile-container">
+            <a href="chat.html" target="_blank">Start Chat</a>
+            <!-- Profiles will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Music Section-->
+    <h2>Discover Music</h2>
+    <div class="songs-container">
+        <div id="songs-list">
+            <!-- Songs will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <!-- Fixed Audio Player and Controls at the bottom -->
+    <div class="music-player">
+        <img src="C:\xampp\htdocs\Project\thumbnails\album-art.jpg" alt="Album Art" class="album-art" id="thumbnail">
+    
+        <div class="song-info">
+            <h2 id="title">Koi Kahe Kehta Rahe</h2>
+            <h3 id="artist">Shankar Mahadevan, Shaan, KK</h3>
+        </div>
+    
+        <div class="controls">
+            <button class="control-btn" id="shuffle"><i class="fa fa-random"></i></button>
+            <button class="control-btn" id="prev"><i class="fa fa-backward"></i></button>
+            <button class="control-btn play-pause" id="play-pause"><i class="fa fa-play"></i></button>
+            <button class="control-btn" id="next"><i class="fa fa-forward"></i></button>
+            <button class="control-btn" id="repeat"><i class="fa fa-repeat"></i></button>
+        </div>
+    
+        <div class="progress-container">
+            <span class="progress-time" id="current-time">0:00</span>
+            <div class="progress-bar">
+                <input type="range" id="progress" value="0" min="0" max="100">
+            </div>
+            <span class="progress-time" id="total-time">5:46</span>
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>

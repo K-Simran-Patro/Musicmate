@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #110F10; /* Dark background color */
+  color: #CEF196;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  background-color: #110F10; /* Matches the dark background */
+  color: #CEF196;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #CEF196;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.profile-picture-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-picture-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #CEF196;
+}
+
+#profile-picture-upload {
+  margin-top: 10px;
+}
+
+#user-id,
+#user-email,
+label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #CEF196;
+  text-align: center;
+}
+
+.editable {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #CEF196;
+  border-radius: 8px;
+  background-color: #1C1C1C;
+  color: #CEF196;
+  text-align: center;
+  width: 300px;
+}
+
+#logout-button {
+  background-color: #0095f6;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#logout-button:hover {
+  background-color: #007bb5;
+}

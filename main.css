@@ -1,0 +1,261 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 60px; /* So that content doesn't hide behind the fixed header */
+    background-color: black;
+    overflow-y: auto; 
+    color: #CEF196;
+}
+
+header {
+    background-color: #110F10;
+    color: #CEF196;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #CEF196;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #CEF196;
+    color: #110F10;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #CEF196; /* Light green that contrasts with the black background */
+}
+
+.profile-card p, .songs-container h2 {
+    color: #CEF196;
+}
+
+.profiles {
+    padding-top: 50px; /* Add padding just to this section */
+} 
+
+/* Profile Section Styling */
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 150px;
+    color: #CEF196;
+    box-shadow: 0 2px 8px #CEF196;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.profile-card p {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+/* Music player */
+.music-player {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: #CEF196;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.album-art {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.music-player img {
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.song-info {
+    flex-grow: 1;
+    margin-left: 15px;
+    color: #CEF196;
+}
+
+.song-info h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-info h3 {
+    font-size: 14px;
+    color: #CEF196;
+    margin: 5px 0 0;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: #CEF196;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.control-btn.play-pause {
+    background-color: #CEF196;
+    color: black;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: #CEF196;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Styling for the song card container */
+.songs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+/* Each song card */
+.song-card {
+    width: 200px;
+    height: 300px; /* Ensures all song cards are the same size */
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 8px #CEF196;
+    border-radius: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Song thumbnail */
+.song-thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.song-card h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Play button styling */
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 15px;
+    width: 100%; /* Allows it to stretch to fill space */
+}
+
+.progress-time {
+    font-size: 12px;
+    min-width: 35px; /* Ensures consistent time size */
+}
+
+.progress-bar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.progress-bar input[type="range"] {
+    width: 100%;
+    margin: 0 10px;
+    appearance: none;
+    background: #CEF196;
+    height: 3px;
+    border-radius: 5px;
+}
+
+.progress-bar input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #CEF196;
+}
+
+
+/* Style for h2 and h3 in the music player */
+.music-player h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
